@@ -1,0 +1,1030 @@
+{
+  "dns": {
+    "servers": [
+      {
+        "tag": "ns-cn",
+        "type": "udp",
+        "server": "223.5.5.5"
+      },
+      {
+        "tag": "ns-global",
+        "type": "https",
+        "server": "cloudflare-dns.com",
+        "domain_resolver": "ns-bootstrap"
+      },
+      {
+        "tag": "ns-bootstrap",
+        "type": "udp",
+        "server": "1.1.1.1"
+      },
+      {
+        "tag": "ns-fakeip",
+        "type": "fakeip",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "clash_mode": "direct",
+        "server": "ns-cn"
+      },
+      {
+        "clash_mode": "global",
+        "server": "ns-fakeip"
+      },
+      {
+        "rule_set": "custom-mirrorsites",
+        "server": "ns-cn"
+      },
+      {
+        "query_type": ["HTTPS", "SVCB"],
+        "action": "reject"
+      },
+      {
+        "rule_set": "fakeipfilter",
+        "server": "ns-cn"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "server": "ns-cn"
+      },
+      {
+        "query_type": ["A", "AAAA"],
+        "server": "ns-fakeip",
+        "rewrite_ttl": 1
+      }
+    ],
+    "final": "ns-global",
+    "strategy": "prefer_ipv4",
+    "independent_cache": true,
+    "reverse_mapping": true
+  },
+  "inbounds": [
+    {
+      "tag": "dns-in",
+      "type": "direct",
+      "listen": "::",
+      "listen_port": 1053
+    },
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
+    },
+    {
+      "tag": "redirect-in",
+      "type": "redirect",
+      "listen": "::",
+      "listen_port": 7891
+    },
+    {
+      "tag": "tproxy-in",
+      "type": "tproxy",
+      "listen": "::",
+      "listen_port": 7892
+    },
+    {
+      "tag": "tun-in",
+      "type": "tun",
+      "interface_name": "momo",
+      "address": [
+        "172.31.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": false,
+      "auto_redirect": false
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "DIRECT",
+      "type": "direct"
+    },
+    {
+      "tag": "ALL NODES",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇭🇰 HONG KONG",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇹🇼 TAIWAN",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇺🇸 UNITED STATES",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇬🇧 UNITED KINGDOM",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇩🇪 GERMANY",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇯🇵 JAPAN",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇸🇬 SINGAPORE",
+      "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇺🇸 UNITED STATES",
+        "ALL NODES"
+      ],
+      "default": "🇭🇰 HONG KONG"
+    },
+    {
+      "tag": "Apple",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇭🇰 HONG KONG"
+    },
+    {
+      "tag": "Google",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇭🇰 HONG KONG"
+    },
+    {
+      "tag": "AI",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇭🇰 HONG KONG"
+    },
+    {
+      "tag": "Facebook",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Twitter",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Instagram",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Discord",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Slack",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Line",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇹🇼 TAIWAN"
+    },
+    {
+      "tag": "YouTube",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇭🇰 HONG KONG"
+    },
+    {
+      "tag": "TikTok",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Netflix",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "AppleTV+",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Disney+",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Hulu",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Paramount+",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Amazon Prime",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Streaming",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇺🇸 UNITED STATES"
+    },
+    {
+      "tag": "Gaming",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇭🇰 HONG KONG"
+    },
+    {
+      "tag": "Dev",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG",
+        "🇹🇼 TAIWAN",
+        "🇺🇸 UNITED STATES",
+        "🇬🇧 UNITED KINGDOM",
+        "🇩🇪 GERMANY",
+        "🇯🇵 JAPAN",
+        "🇸🇬 SINGAPORE",
+        "ALL NODES"
+      ],
+      "default": "🇭🇰 HONG KONG"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff",
+        "sniffer": [
+          "dns",
+          "http",
+          "tls",
+          "quic"
+        ]
+      },
+      {
+        "inbound": "dns-in",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "DIRECT"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "DIRECT"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "ALL NODES"
+      },
+      {
+        "rule_set": "custom-mirrorsites",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-microsoft-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-microsoft",
+        "outbound": "Microsoft"
+      },
+      {
+        "rule_set": "geosite-apple-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-apple",
+        "outbound": "Apple"
+      },
+      {
+        "rule_set": "geosite-google",
+        "outbound": "Google"
+      },
+      {
+        "rule_set": "geosite-ai-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-ai",
+        "outbound": "AI"
+      },
+      {
+        "rule_set": "geosite-facebook",
+        "outbound": "Facebook"
+      },
+      {
+        "rule_set": "geosite-twitter",
+        "outbound": "Twitter"
+      },
+      {
+        "rule_set": "geosite-instagram",
+        "outbound": "Instagram"
+      },
+      {
+        "rule_set": "geosite-discord",
+        "outbound": "Discord"
+      },
+      {
+        "rule_set": "geosite-slack",
+        "outbound": "Slack"
+      },
+      {
+        "rule_set": "geosite-line",
+        "outbound": "Line"
+      },
+      {
+        "rule_set": "geosite-youtube",
+        "outbound": "YouTube"
+      },
+      {
+        "rule_set": "geosite-tiktok",
+        "outbound": "TikTok"
+      },
+      {
+        "rule_set": "geosite-netflix",
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "geosite-appletvplus",
+        "outbound": "AppleTV+"
+      },
+      {
+        "rule_set": "geosite-disneyplus",
+        "outbound": "Disney+"
+      },
+      {
+        "rule_set": "geosite-hulu",
+        "outbound": "Hulu"
+      },
+      {
+        "rule_set": "geosite-primevideo",
+        "outbound": "Amazon Prime"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {"rule_set": "geosite-youtube"},
+          {"rule_set": "geosite-tiktok"},
+          {"rule_set": "geosite-appletvplus"},
+          {"rule_set": "geosite-netflix"},
+          {"rule_set": "geosite-disneyplus"},
+          {"rule_set": "geosite-hulu"},
+          {"rule_set": "geosite-primevideo"},
+          {"rule_set": "geosite-gog"},
+          {"rule_set": "geosite-xbox"},
+          {"rule_set": "geosite-nintendo"},
+          {"rule_set": "geosite-ubisoft"},
+          {"rule_set": "geosite-riot"}
+        ],
+        "outbound": "Streaming"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {"rule_set": "geosite-steam-cn"},
+          {"rule_set": "geosite-epic-cn"},
+          {"rule_set": "geosite-gog-cn"},
+          {"rule_set": "geosite-xbox-cn"},
+          {"rule_set": "geosite-nintendo-cn"},
+          {"rule_set": "geosite-ubisoft-cn"},
+          {"rule_set": "geosite-riot-cn"}
+        ],
+        "outbound": "DIRECT"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {"rule_set": "geosite-steam"},
+          {"rule_set": "geosite-epic"},
+          {"rule_set": "geosite-gog"},
+          {"rule_set": "geosite-xbox"},
+          {"rule_set": "geosite-nintendo"},
+          {"rule_set": "geosite-ubisoft"},
+          {"rule_set": "geosite-riot"}
+        ],
+        "outbound": "Gaming"
+      },
+      {
+        "rule_set": "geosite-dev-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-dev",
+        "outbound": "Dev"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-!cn",
+        "outbound": "ALL NODES"
+      },
+      {
+        "action": "resolve",
+        "server": "ns-bootstrap",
+        "strategy": "prefer_ipv4",
+        "disable_cache": true
+      },
+      {
+        "rule_set": "geoip-google",
+        "outbound": "Google"
+      },
+      {
+        "rule_set": "geoip-netflix",
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "DIRECT"
+      }
+    ],
+    "final": "ALL NODES",
+    "default_domain_resolver": "ns-bootstrap",
+    "rule_set": [
+      {
+        "tag": "fakeipfilter",
+        "type": "remote",
+        "format": "source",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/cwbitz/proxy-rulesets/refs/heads/main/rule-sets/sing-box/fakeipfilter.json",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "custom-mirrorsites",
+        "type": "inline",
+        "rules": [
+          { "domain": "gh-proxy.com" },
+          { "domain": "github.tbedu.top" },
+          { "domain": "gh-proxy.codez.dpdns.org" },
+          { "domain": "dh-proxy.codez.dpdns.org" },
+          { "domain": "cdn.jsdelivr.net" },
+          { "domain": "registry.npmmirror.com" },
+          { "domain": "mirrors.tuna.tsinghua.edu.cn" },
+          { "domain": "mirrors.ustc.edu.cn" },
+          { "domain": "mirrors.sjtug.sjtu.edu.cn" },
+          { "domain": "mirrors.zju.edu.cn" },
+          { "domain": "mirror.nju.edu.cn" },
+          { "domain": "developer.aliyun.com" },
+          { "domain": "mirrors.aliyun.com" },
+          { "domain": "mirrors.cloud.tencent.com" },
+          { "domain": "mirrors.huaweicloud.com" }
+        ]
+      },
+      {
+        "tag": "geosite-microsoft-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-microsoft",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-apple-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-ai-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-ai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-facebook",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-twitter",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitter.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-instagram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/instagram.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-discord",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/discord.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-slack",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/slack.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-line",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/line.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-tiktok",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-appletvplus",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple-tvplus.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-disneyplus",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-hulu",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hulu.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-primevideo",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-steam-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-steam",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-epic-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/epicgames@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-epic",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/epicgames.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-gog-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gog@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-gog",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gog.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-xbox-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/xbox@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-xbox",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/xbox.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-nintendo-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/nintendo@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-nintendo",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/nintendo.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-ubisoft-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ubisoft@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-ubisoft",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ubisoft.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-riot-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/riot@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-riot",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/riot.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-dev-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-dev@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-dev",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-dev.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geoip-google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geoip-netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://github.com/qljsyph/ruleset-icon/raw/refs/heads/main/sing-box/geoip/China-ASN-combined-ip.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      }
+    ]
+  },
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "/etc/momo/run/cache.db",
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "0.0.0.0:9095",
+      "external_ui": "/etc/momo/run/ui",
+      "external_ui_download_url": "https://gh-proxy.com/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "DIRECT",
+      "secret": "",
+      "default_mode": "rule"
+    }
+  }
+}

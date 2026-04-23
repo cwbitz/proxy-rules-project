@@ -1,0 +1,77 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain": [
+        "localhost",
+        "mesu.apple.com",
+        "swscan.apple.com",
+        "swquery.apple.com",
+        "swdownload.apple.com",
+        "swcdn.apple.com",
+        "swdist.apple.com",
+        "gdmf.apple.com",
+        "configuration.apple.com",
+        "captive.apple.com",
+        "connectivitycheck.gstatic.com",
+        "connectivitycheck.android.com",
+        "clients3.google.com",
+        "nmcheck.gnome.org",
+        "connect.rom.miui.com",
+        "srv.nintendo.net"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "lan",
+        "localdomain",
+        "example",
+        "invalid",
+        "localhost",
+        "test",
+        "local",
+        "home.arpa",
+        "direct",
+        "cluster.local",
+        "msftconnecttest.com",
+        "msftncsi.com",
+        "time.apple.com",
+        "time-ios.apple.com",
+        "time.windows.com",
+        "time.android.com",
+        "pool.ntp.org",
+        "openwrt.pool.ntp.org",
+        "ntp.org.cn",
+        "time.google.com",
+        "time1.google.com",
+        "time2.google.com",
+        "ntp.aliyun.com",
+        "time.aliyun.com",
+        "time1.aliyun.com",
+        "time2.aliyun.com",
+        "ntp.tencent.com",
+        "time.tencent.com",
+        "time1.cloud.tencent.com",
+        "time2.cloud.tencent.com",
+        "3gppnetwork.org",
+        "dynv6.net",
+        "duckdns.org",
+        "no-ip.com",
+        "dyndns.org",
+        "changeip.com",
+        "natapp.cn",
+        "natfrp.com",
+        "oray.com",
+        "orayimg.com",
+        "peanuthull.com",
+        "xboxlive.com",
+        "xboxservices.com"
+      ]
+    },
+    {
+      "domain_regex": [
+        "^localhost\\.[^.]+\\.weixin\\.qq\\.com$"
+      ]
+    }
+  ]
+}

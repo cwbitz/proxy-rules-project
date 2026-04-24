@@ -4,18 +4,21 @@
       {
         "tag": "ns-cn",
         "type": "udp",
-        "server": "223.5.5.5"
+        "server": "223.5.5.5",
+        "detour": "DIRECT"
       },
       {
         "tag": "ns-global",
         "type": "https",
         "server": "cloudflare-dns.com",
-        "domain_resolver": "ns-bootstrap"
+        "domain_resolver": "ns-bootstrap",
+        "detour": "ALL NODES"
       },
       {
         "tag": "ns-bootstrap",
         "type": "udp",
-        "server": "1.1.1.1"
+        "server": "1.1.1.1",
+        "detour": "ALL NODES"
       },
       {
         "tag": "ns-fakeip",

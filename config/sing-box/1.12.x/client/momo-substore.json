@@ -10,14 +10,12 @@
         "tag": "ns-global",
         "type": "https",
         "server": "cloudflare-dns.com",
-        "domain_resolver": "ns-bootstrap",
-        "detour": "ALL NODES"
+        "domain_resolver": "ns-bootstrap"
       },
       {
         "tag": "ns-bootstrap",
         "type": "udp",
-        "server": "1.1.1.1",
-        "detour": "ALL NODES"
+        "server": "1.1.1.1"
       },
       {
         "tag": "ns-fakeip",

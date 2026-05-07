@@ -619,6 +619,10 @@
         "outbound": "Dev"
       },
       {
+        "rule_set": "geosite-tmobile-us",
+        "outbound": "🇺🇸 UNITED STATES"
+      },
+      {
         "rule_set": "geosite-cn",
         "outbound": "DIRECT"
       },
@@ -962,6 +966,14 @@
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-dev.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-tmobile-us",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/cwbitz/proxy-rulesets/refs/heads/main/rule-sets/sing-box/tmobile-us.json",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },

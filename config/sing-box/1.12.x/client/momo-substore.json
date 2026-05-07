@@ -972,7 +972,7 @@
       {
         "tag": "geosite-tmobile-us",
         "type": "remote",
-        "format": "binary",
+        "format": "source",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/cwbitz/proxy-rules-project/refs/heads/main/rule-sets/sing-box/tmobile-us.json",
         "download_detour": "DIRECT",
         "update_interval": "1d"

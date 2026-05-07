@@ -656,7 +656,7 @@
         "tag": "fakeipfilter",
         "type": "remote",
         "format": "source",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/cwbitz/proxy-rulesets/refs/heads/main/rule-sets/sing-box/fakeipfilter.json",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/cwbitz/proxy-rules-project/refs/heads/main/rule-sets/sing-box/fakeipfilter.json",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -973,7 +973,7 @@
         "tag": "geosite-tmobile-us",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/cwbitz/proxy-rulesets/refs/heads/main/rule-sets/sing-box/tmobile-us.json",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/cwbitz/proxy-rules-project/refs/heads/main/rule-sets/sing-box/tmobile-us.json",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },

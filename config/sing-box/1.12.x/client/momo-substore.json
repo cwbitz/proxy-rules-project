@@ -106,17 +106,12 @@
       "type": "direct"
     },
     {
-      "tag": "ALL NODES <AUTO>",
-      "type": "urltest",
-      "outbounds": []
-    },
-    {
       "tag": "ALL NODES <MANUAL>",
       "type": "selector",
       "outbounds": []
     },
     {
-      "tag": "🇭🇰 HONG KONG <AUTO>",
+      "tag": "ALL NODES <AUTO>",
       "type": "urltest",
       "outbounds": []
     },
@@ -126,7 +121,7 @@
       "outbounds": []
     },
     {
-      "tag": "🇹🇼 TAIWAN <AUTO>",
+      "tag": "🇭🇰 HONG KONG <AUTO>",
       "type": "urltest",
       "outbounds": []
     },
@@ -136,7 +131,7 @@
       "outbounds": []
     },
     {
-      "tag": "🇺🇸 UNITED STATES <AUTO>",
+      "tag": "🇹🇼 TAIWAN <AUTO>",
       "type": "urltest",
       "outbounds": []
     },
@@ -146,7 +141,7 @@
       "outbounds": []
     },
     {
-      "tag": "🇬🇧 UNITED KINGDOM <AUTO>",
+      "tag": "🇺🇸 UNITED STATES <AUTO>",
       "type": "urltest",
       "outbounds": []
     },
@@ -156,7 +151,7 @@
       "outbounds": []
     },
     {
-      "tag": "🇩🇪 GERMANY <AUTO>",
+      "tag": "🇬🇧 UNITED KINGDOM <AUTO>",
       "type": "urltest",
       "outbounds": []
     },
@@ -166,7 +161,7 @@
       "outbounds": []
     },
     {
-      "tag": "🇯🇵 JAPAN <AUTO>",
+      "tag": "🇩🇪 GERMANY <AUTO>",
       "type": "urltest",
       "outbounds": []
     },
@@ -176,13 +171,18 @@
       "outbounds": []
     },
     {
-      "tag": "🇸🇬 SINGAPORE <AUTO>",
+      "tag": "🇯🇵 JAPAN <AUTO>",
       "type": "urltest",
       "outbounds": []
     },
     {
       "tag": "🇸🇬 SINGAPORE <MANUAL>",
       "type": "selector",
+      "outbounds": []
+    },
+    {
+      "tag": "🇸🇬 SINGAPORE <AUTO>",
+      "type": "urltest",
       "outbounds": []
     },
     {

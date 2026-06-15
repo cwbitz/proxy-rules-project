@@ -42,7 +42,10 @@
         "server": "ns-cn"
       },
       {
-        "query_type": ["HTTPS", "SVCB"],
+        "query_type": [
+          "HTTPS",
+          "SVCB"
+        ],
         "action": "reject"
       },
       {
@@ -54,7 +57,10 @@
         "server": "ns-cn"
       },
       {
-        "query_type": ["A", "AAAA"],
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
         "server": "ns-fakeip",
         "rewrite_ttl": 1
       }
@@ -186,17 +192,50 @@
       "outbounds": []
     },
     {
-      "tag": "Microsoft",
+      "tag": "AI",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HONG KONG <AUTO>",
         "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
         "🇺🇸 UNITED STATES <AUTO>",
         "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
         "ALL NODES <AUTO>",
         "ALL NODES <MANUAL>"
       ],
       "default": "🇭🇰 HONG KONG <AUTO>"
+    },
+    {
+      "tag": "Amazon Prime",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
     },
     {
       "tag": "Apple",
@@ -222,7 +261,30 @@
       "default": "🇭🇰 HONG KONG <AUTO>"
     },
     {
-      "tag": "Google",
+      "tag": "AppleTV+",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Dev",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HONG KONG <AUTO>",
@@ -243,239 +305,9 @@
         "ALL NODES <MANUAL>"
       ],
       "default": "🇭🇰 HONG KONG <AUTO>"
-    },
-    {
-      "tag": "AI",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇭🇰 HONG KONG <AUTO>"
-    },
-    {
-      "tag": "Facebook",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "Twitter",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "Instagram",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
     },
     {
       "tag": "Discord",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "Slack",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "Line",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇹🇼 TAIWAN <AUTO>"
-    },
-    {
-      "tag": "YouTube",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇭🇰 HONG KONG <AUTO>"
-    },
-    {
-      "tag": "TikTok",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "Netflix",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "AppleTV+",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HONG KONG <AUTO>",
@@ -521,76 +353,7 @@
       "default": "🇺🇸 UNITED STATES <AUTO>"
     },
     {
-      "tag": "Hulu",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "Paramount+",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "Amazon Prime",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "ALL NODES <AUTO>",
-        "ALL NODES <MANUAL>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
-      "tag": "Streaming",
+      "tag": "Facebook",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HONG KONG <AUTO>",
@@ -636,7 +399,250 @@
       "default": "🇭🇰 HONG KONG <AUTO>"
     },
     {
-      "tag": "Dev",
+      "tag": "Google",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇭🇰 HONG KONG <AUTO>"
+    },
+    {
+      "tag": "Hulu",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Instagram",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Line",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇹🇼 TAIWAN <AUTO>"
+    },
+    {
+      "tag": "Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇭🇰 HONG KONG <AUTO>"
+    },
+    {
+      "tag": "Netflix",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Paramount+",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Slack",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Streaming",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "TikTok",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Twitter",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "ALL NODES <AUTO>",
+        "ALL NODES <MANUAL>"
+      ],
+      "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "YouTube",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HONG KONG <AUTO>",
@@ -774,18 +780,42 @@
         "type": "logical",
         "mode": "or",
         "rules": [
-          {"rule_set": "geosite-youtube"},
-          {"rule_set": "geosite-tiktok"},
-          {"rule_set": "geosite-appletvplus"},
-          {"rule_set": "geosite-netflix"},
-          {"rule_set": "geosite-disneyplus"},
-          {"rule_set": "geosite-hulu"},
-          {"rule_set": "geosite-primevideo"},
-          {"rule_set": "geosite-gog"},
-          {"rule_set": "geosite-xbox"},
-          {"rule_set": "geosite-nintendo"},
-          {"rule_set": "geosite-ubisoft"},
-          {"rule_set": "geosite-riot"}
+          {
+            "rule_set": "geosite-youtube"
+          },
+          {
+            "rule_set": "geosite-tiktok"
+          },
+          {
+            "rule_set": "geosite-appletvplus"
+          },
+          {
+            "rule_set": "geosite-netflix"
+          },
+          {
+            "rule_set": "geosite-disneyplus"
+          },
+          {
+            "rule_set": "geosite-hulu"
+          },
+          {
+            "rule_set": "geosite-primevideo"
+          },
+          {
+            "rule_set": "geosite-gog"
+          },
+          {
+            "rule_set": "geosite-xbox"
+          },
+          {
+            "rule_set": "geosite-nintendo"
+          },
+          {
+            "rule_set": "geosite-ubisoft"
+          },
+          {
+            "rule_set": "geosite-riot"
+          }
         ],
         "outbound": "Streaming"
       },
@@ -793,13 +823,27 @@
         "type": "logical",
         "mode": "or",
         "rules": [
-          {"rule_set": "geosite-steam-cn"},
-          {"rule_set": "geosite-epic-cn"},
-          {"rule_set": "geosite-gog-cn"},
-          {"rule_set": "geosite-xbox-cn"},
-          {"rule_set": "geosite-nintendo-cn"},
-          {"rule_set": "geosite-ubisoft-cn"},
-          {"rule_set": "geosite-riot-cn"}
+          {
+            "rule_set": "geosite-steam-cn"
+          },
+          {
+            "rule_set": "geosite-epic-cn"
+          },
+          {
+            "rule_set": "geosite-gog-cn"
+          },
+          {
+            "rule_set": "geosite-xbox-cn"
+          },
+          {
+            "rule_set": "geosite-nintendo-cn"
+          },
+          {
+            "rule_set": "geosite-ubisoft-cn"
+          },
+          {
+            "rule_set": "geosite-riot-cn"
+          }
         ],
         "outbound": "DIRECT"
       },
@@ -807,13 +851,27 @@
         "type": "logical",
         "mode": "or",
         "rules": [
-          {"rule_set": "geosite-steam"},
-          {"rule_set": "geosite-epic"},
-          {"rule_set": "geosite-gog"},
-          {"rule_set": "geosite-xbox"},
-          {"rule_set": "geosite-nintendo"},
-          {"rule_set": "geosite-ubisoft"},
-          {"rule_set": "geosite-riot"}
+          {
+            "rule_set": "geosite-steam"
+          },
+          {
+            "rule_set": "geosite-epic"
+          },
+          {
+            "rule_set": "geosite-gog"
+          },
+          {
+            "rule_set": "geosite-xbox"
+          },
+          {
+            "rule_set": "geosite-nintendo"
+          },
+          {
+            "rule_set": "geosite-ubisoft"
+          },
+          {
+            "rule_set": "geosite-riot"
+          }
         ],
         "outbound": "Gaming"
       },
@@ -879,21 +937,51 @@
         "tag": "custom-mirrorsites",
         "type": "inline",
         "rules": [
-          { "domain": "gh-proxy.com" },
-          { "domain": "github.tbedu.top" },
-          { "domain": "gh-proxy.codez.dpdns.org" },
-          { "domain": "dh-proxy.codez.dpdns.org" },
-          { "domain": "cdn.jsdelivr.net" },
-          { "domain": "registry.npmmirror.com" },
-          { "domain": "mirrors.tuna.tsinghua.edu.cn" },
-          { "domain": "mirrors.ustc.edu.cn" },
-          { "domain": "mirrors.sjtug.sjtu.edu.cn" },
-          { "domain": "mirrors.zju.edu.cn" },
-          { "domain": "mirror.nju.edu.cn" },
-          { "domain": "developer.aliyun.com" },
-          { "domain": "mirrors.aliyun.com" },
-          { "domain": "mirrors.cloud.tencent.com" },
-          { "domain": "mirrors.huaweicloud.com" }
+          {
+            "domain": "gh-proxy.com"
+          },
+          {
+            "domain": "github.tbedu.top"
+          },
+          {
+            "domain": "gh-proxy.codez.dpdns.org"
+          },
+          {
+            "domain": "dh-proxy.codez.dpdns.org"
+          },
+          {
+            "domain": "cdn.jsdelivr.net"
+          },
+          {
+            "domain": "registry.npmmirror.com"
+          },
+          {
+            "domain": "mirrors.tuna.tsinghua.edu.cn"
+          },
+          {
+            "domain": "mirrors.ustc.edu.cn"
+          },
+          {
+            "domain": "mirrors.sjtug.sjtu.edu.cn"
+          },
+          {
+            "domain": "mirrors.zju.edu.cn"
+          },
+          {
+            "domain": "mirror.nju.edu.cn"
+          },
+          {
+            "domain": "developer.aliyun.com"
+          },
+          {
+            "domain": "mirrors.aliyun.com"
+          },
+          {
+            "domain": "mirrors.cloud.tencent.com"
+          },
+          {
+            "domain": "mirrors.huaweicloud.com"
+          }
         ]
       },
       {

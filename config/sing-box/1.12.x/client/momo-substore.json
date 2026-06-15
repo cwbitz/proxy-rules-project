@@ -46,6 +46,13 @@
         "action": "reject"
       },
       {
+        "domain_suffix": [
+          "djso.sbs",
+          "kuos.xyz"
+        ],
+        "server": "ns-global"
+      },
+      {
         "rule_set": "fakeipfilter",
         "server": "ns-cn"
       },
@@ -836,6 +843,16 @@
       {
         "rule_set": "geosite-!cn",
         "outbound": "ALL NODES <MANUAL>"
+      },
+      {
+        "domain_suffix": [
+          "djso.sbs",
+          "kuos.xyz"
+        ],
+        "action": "resolve",
+        "server": "ns-global",
+        "strategy": "prefer_ipv4",
+        "disable_cache": true
       },
       {
         "action": "resolve",

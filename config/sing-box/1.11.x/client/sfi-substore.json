@@ -950,8 +950,7 @@
       {
         "action": "resolve",
         "server": "ns-bootstrap",
-        "strategy": "prefer_ipv4",
-        "disable_cache": true
+        "strategy": "prefer_ipv4"
       },
       {
         "rule_set": "geoip-google",

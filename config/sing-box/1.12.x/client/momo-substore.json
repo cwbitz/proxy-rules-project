@@ -784,7 +784,8 @@
           "dns",
           "http",
           "tls",
-          "quic"
+          "quic",
+          "bittorrent"
         ]
       },
       {
@@ -793,6 +794,10 @@
       },
       {
         "ip_is_private": true,
+        "outbound": "DIRECT"
+      },
+      {
+        "protocol": "bittorrent",
         "outbound": "DIRECT"
       },
       {

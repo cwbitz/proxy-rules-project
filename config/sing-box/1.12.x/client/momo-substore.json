@@ -211,29 +211,6 @@
       "default": "🇭🇰 HONG KONG <AUTO>"
     },
     {
-      "tag": "Amazon Prime",
-      "type": "selector",
-      "outbounds": [
-        "🇭🇰 HONG KONG <MANUAL>",
-        "🇭🇰 HONG KONG <AUTO>",
-        "🇹🇼 TAIWAN <MANUAL>",
-        "🇹🇼 TAIWAN <AUTO>",
-        "🇺🇸 UNITED STATES <MANUAL>",
-        "🇺🇸 UNITED STATES <AUTO>",
-        "🇬🇧 UNITED KINGDOM <MANUAL>",
-        "🇬🇧 UNITED KINGDOM <AUTO>",
-        "🇩🇪 GERMANY <MANUAL>",
-        "🇩🇪 GERMANY <AUTO>",
-        "🇯🇵 JAPAN <MANUAL>",
-        "🇯🇵 JAPAN <AUTO>",
-        "🇸🇬 SINGAPORE <MANUAL>",
-        "🇸🇬 SINGAPORE <AUTO>",
-        "ALL NODES <MANUAL>",
-        "ALL NODES <AUTO>"
-      ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
-    },
-    {
       "tag": "Apple",
       "type": "selector",
       "outbounds": [
@@ -351,6 +328,29 @@
       "default": "🇺🇸 UNITED STATES <AUTO>"
     },
     {
+      "tag": "Epic",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "ALL NODES <MANUAL>",
+        "ALL NODES <AUTO>"
+      ],
+      "default": "🇭🇰 HONG KONG <AUTO>"
+    },
+    {
       "tag": "Facebook",
       "type": "selector",
       "outbounds": [
@@ -374,7 +374,7 @@
       "default": "🇺🇸 UNITED STATES <AUTO>"
     },
     {
-      "tag": "Gaming",
+      "tag": "GOG",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HONG KONG <MANUAL>",
@@ -526,7 +526,30 @@
       "default": "🇺🇸 UNITED STATES <AUTO>"
     },
     {
-      "tag": "Paramount+",
+      "tag": "Nintendo",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "ALL NODES <MANUAL>",
+        "ALL NODES <AUTO>"
+      ],
+      "default": "🇭🇰 HONG KONG <AUTO>"
+    },
+    {
+      "tag": "Prime Video",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HONG KONG <MANUAL>",
@@ -547,6 +570,29 @@
         "ALL NODES <AUTO>"
       ],
       "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Riot",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "ALL NODES <MANUAL>",
+        "ALL NODES <AUTO>"
+      ],
+      "default": "🇭🇰 HONG KONG <AUTO>"
     },
     {
       "tag": "Slack",
@@ -592,7 +638,7 @@
       "default": "🇺🇸 UNITED STATES <AUTO>"
     },
     {
-      "tag": "Streaming",
+      "tag": "Steam",
       "type": "selector",
       "outbounds": [
         "🇭🇰 HONG KONG <MANUAL>",
@@ -612,7 +658,7 @@
         "ALL NODES <MANUAL>",
         "ALL NODES <AUTO>"
       ],
-      "default": "🇺🇸 UNITED STATES <AUTO>"
+      "default": "🇭🇰 HONG KONG <AUTO>"
     },
     {
       "tag": "TikTok",
@@ -659,6 +705,52 @@
         "ALL NODES <AUTO>"
       ],
       "default": "🇺🇸 UNITED STATES <AUTO>"
+    },
+    {
+      "tag": "Ubisoft",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "ALL NODES <MANUAL>",
+        "ALL NODES <AUTO>"
+      ],
+      "default": "🇭🇰 HONG KONG <AUTO>"
+    },
+    {
+      "tag": "Xbox",
+      "type": "selector",
+      "outbounds": [
+        "🇭🇰 HONG KONG <MANUAL>",
+        "🇭🇰 HONG KONG <AUTO>",
+        "🇹🇼 TAIWAN <MANUAL>",
+        "🇹🇼 TAIWAN <AUTO>",
+        "🇺🇸 UNITED STATES <MANUAL>",
+        "🇺🇸 UNITED STATES <AUTO>",
+        "🇬🇧 UNITED KINGDOM <MANUAL>",
+        "🇬🇧 UNITED KINGDOM <AUTO>",
+        "🇩🇪 GERMANY <MANUAL>",
+        "🇩🇪 GERMANY <AUTO>",
+        "🇯🇵 JAPAN <MANUAL>",
+        "🇯🇵 JAPAN <AUTO>",
+        "🇸🇬 SINGAPORE <MANUAL>",
+        "🇸🇬 SINGAPORE <AUTO>",
+        "ALL NODES <MANUAL>",
+        "ALL NODES <AUTO>"
+      ],
+      "default": "🇭🇰 HONG KONG <AUTO>"
     },
     {
       "tag": "YouTube",
@@ -716,12 +808,12 @@
         "outbound": "DIRECT"
       },
       {
-        "rule_set": "geosite-microsoft-cn",
+        "rule_set": "geosite-ai-cn",
         "outbound": "DIRECT"
       },
       {
-        "rule_set": "geosite-microsoft",
-        "outbound": "Microsoft"
+        "rule_set": "geosite-ai",
+        "outbound": "AI"
       },
       {
         "rule_set": "geosite-apple-cn",
@@ -732,167 +824,8 @@
         "outbound": "Apple"
       },
       {
-        "rule_set": "geosite-google",
-        "outbound": "Google"
-      },
-      {
-        "rule_set": "geosite-ai-cn",
-        "outbound": "DIRECT"
-      },
-      {
-        "rule_set": "geosite-ai",
-        "outbound": "AI"
-      },
-      {
-        "rule_set": "geosite-facebook",
-        "outbound": "Facebook"
-      },
-      {
-        "rule_set": "geosite-twitter",
-        "outbound": "Twitter"
-      },
-      {
-        "rule_set": "geosite-instagram",
-        "outbound": "Instagram"
-      },
-      {
-        "rule_set": "geosite-discord",
-        "outbound": "Discord"
-      },
-      {
-        "rule_set": "geosite-slack",
-        "outbound": "Slack"
-      },
-      {
-        "rule_set": "geosite-line",
-        "outbound": "Line"
-      },
-      {
-        "rule_set": "geosite-youtube",
-        "outbound": "YouTube"
-      },
-      {
-        "rule_set": "geosite-tiktok",
-        "outbound": "TikTok"
-      },
-      {
-        "rule_set": "geosite-netflix",
-        "outbound": "Netflix"
-      },
-      {
         "rule_set": "geosite-appletvplus",
         "outbound": "AppleTV+"
-      },
-      {
-        "rule_set": "geosite-disneyplus",
-        "outbound": "Disney+"
-      },
-      {
-        "rule_set": "geosite-hulu",
-        "outbound": "Hulu"
-      },
-      {
-        "rule_set": "geosite-primevideo",
-        "outbound": "Amazon Prime"
-      },
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "rule_set": "geosite-youtube"
-          },
-          {
-            "rule_set": "geosite-tiktok"
-          },
-          {
-            "rule_set": "geosite-appletvplus"
-          },
-          {
-            "rule_set": "geosite-netflix"
-          },
-          {
-            "rule_set": "geosite-disneyplus"
-          },
-          {
-            "rule_set": "geosite-hulu"
-          },
-          {
-            "rule_set": "geosite-primevideo"
-          },
-          {
-            "rule_set": "geosite-gog"
-          },
-          {
-            "rule_set": "geosite-xbox"
-          },
-          {
-            "rule_set": "geosite-nintendo"
-          },
-          {
-            "rule_set": "geosite-ubisoft"
-          },
-          {
-            "rule_set": "geosite-riot"
-          }
-        ],
-        "outbound": "Streaming"
-      },
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "rule_set": "geosite-steam-cn"
-          },
-          {
-            "rule_set": "geosite-epic-cn"
-          },
-          {
-            "rule_set": "geosite-gog-cn"
-          },
-          {
-            "rule_set": "geosite-xbox-cn"
-          },
-          {
-            "rule_set": "geosite-nintendo-cn"
-          },
-          {
-            "rule_set": "geosite-ubisoft-cn"
-          },
-          {
-            "rule_set": "geosite-riot-cn"
-          }
-        ],
-        "outbound": "DIRECT"
-      },
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "rule_set": "geosite-steam"
-          },
-          {
-            "rule_set": "geosite-epic"
-          },
-          {
-            "rule_set": "geosite-gog"
-          },
-          {
-            "rule_set": "geosite-xbox"
-          },
-          {
-            "rule_set": "geosite-nintendo"
-          },
-          {
-            "rule_set": "geosite-ubisoft"
-          },
-          {
-            "rule_set": "geosite-riot"
-          }
-        ],
-        "outbound": "Gaming"
       },
       {
         "rule_set": "geosite-dev-cn",
@@ -903,8 +836,128 @@
         "outbound": "Dev"
       },
       {
+        "rule_set": "geosite-discord",
+        "outbound": "Discord"
+      },
+      {
+        "rule_set": "geosite-disneyplus",
+        "outbound": "Disney+"
+      },
+      {
+        "rule_set": "geosite-epic-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-epic",
+        "outbound": "Epic"
+      },
+      {
+        "rule_set": "geosite-facebook",
+        "outbound": "Facebook"
+      },
+      {
+        "rule_set": "geosite-gog-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-gog",
+        "outbound": "GOG"
+      },
+      {
+        "rule_set": "geosite-google",
+        "outbound": "Google"
+      },
+      {
+        "rule_set": "geosite-hulu",
+        "outbound": "Hulu"
+      },
+      {
+        "rule_set": "geosite-instagram",
+        "outbound": "Instagram"
+      },
+      {
+        "rule_set": "geosite-line",
+        "outbound": "Line"
+      },
+      {
+        "rule_set": "geosite-microsoft-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-microsoft",
+        "outbound": "Microsoft"
+      },
+      {
+        "rule_set": "geosite-netflix",
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "geosite-nintendo-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-nintendo",
+        "outbound": "Nintendo"
+      },
+      {
+        "rule_set": "geosite-primevideo",
+        "outbound": "Prime Video"
+      },
+      {
+        "rule_set": "geosite-riot-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-riot",
+        "outbound": "Riot"
+      },
+      {
+        "rule_set": "geosite-slack",
+        "outbound": "Slack"
+      },
+      {
+        "rule_set": "geosite-spotify",
+        "outbound": "Spotify"
+      },
+      {
+        "rule_set": "geosite-steam-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-steam",
+        "outbound": "Steam"
+      },
+      {
+        "rule_set": "geosite-tiktok",
+        "outbound": "TikTok"
+      },
+      {
         "rule_set": "geosite-tmobile-us",
         "outbound": "🇺🇸 UNITED STATES <AUTO>"
+      },
+      {
+        "rule_set": "geosite-twitter",
+        "outbound": "Twitter"
+      },
+      {
+        "rule_set": "geosite-ubisoft-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-ubisoft",
+        "outbound": "Ubisoft"
+      },
+      {
+        "rule_set": "geosite-xbox-cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "geosite-xbox",
+        "outbound": "Xbox"
+      },
+      {
+        "rule_set": "geosite-youtube",
+        "outbound": "YouTube"
       },
       {
         "rule_set": "geosite-cn",
@@ -1020,46 +1073,6 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-ai",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
-        "tag": "geosite-ai-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-cn.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
-        "tag": "geosite-apple",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
-        "tag": "geosite-apple-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple@cn.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
-        "tag": "geosite-appletvplus",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple-tvplus.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
         "tag": "geosite-cn",
         "type": "remote",
         "format": "binary",
@@ -1076,10 +1089,42 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-dev",
+        "tag": "geosite-ai-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-dev.srs",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-ai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-!cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-apple-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-appletvplus",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple-tvplus.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -1088,6 +1133,14 @@
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-dev@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-dev",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-dev.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -1108,18 +1161,18 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-epic",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/epicgames.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
         "tag": "geosite-epic-cn",
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/epicgames@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-epic",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/epicgames.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -1132,18 +1185,18 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-gog",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gog.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
         "tag": "geosite-gog-cn",
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gog@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-gog",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gog.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -1180,18 +1233,18 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-microsoft",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
         "tag": "geosite-microsoft-cn",
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-microsoft",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -1204,14 +1257,6 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-nintendo",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/nintendo.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
         "tag": "geosite-nintendo-cn",
         "type": "remote",
         "format": "binary",
@@ -1220,18 +1265,10 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-riot",
+        "tag": "geosite-nintendo",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/riot.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
-        "tag": "geosite-riot-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/riot@cn.srs",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/nintendo.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -1244,10 +1281,18 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-steam",
+        "tag": "geosite-riot-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/riot@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-riot",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/riot.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -1276,6 +1321,14 @@
         "update_interval": "1d"
       },
       {
+        "tag": "geosite-steam",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
         "tag": "geosite-tiktok",
         "type": "remote",
         "format": "binary",
@@ -1300,14 +1353,6 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-ubisoft",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ubisoft.srs",
-        "download_detour": "DIRECT",
-        "update_interval": "1d"
-      },
-      {
         "tag": "geosite-ubisoft-cn",
         "type": "remote",
         "format": "binary",
@@ -1316,10 +1361,10 @@
         "update_interval": "1d"
       },
       {
-        "tag": "geosite-xbox",
+        "tag": "geosite-ubisoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/xbox.srs",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/ubisoft.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
@@ -1328,6 +1373,14 @@
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/xbox@cn.srs",
+        "download_detour": "DIRECT",
+        "update_interval": "1d"
+      },
+      {
+        "tag": "geosite-xbox",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/xbox.srs",
         "download_detour": "DIRECT",
         "update_interval": "1d"
       },
